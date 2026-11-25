@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="hunt-title" href="index.html">A</a>
+
+  <main>
+    <!-- No puzzle title here on purpose: this puzzle's name is just "A". -->
+
+    <img src="images/final.png" alt="Puzzle image" width="2000" height="1700">
+
+    <!-- ANSWER BOX. To change the answer, get a new fingerprint from tools/make-hash.html -->
+    <form class="answer" data-puzzle="final"
+          data-hash="169f7289fa8d2e76fc9b8e2bd2502245b2070672a67e59db6b8ff47787f0c6f8">
+      <input type="text" aria-label="Answer" autocomplete="off" spellcheck="false">
+      <button type="submit">Check</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="check.js"></script>
+</body>
+</html>

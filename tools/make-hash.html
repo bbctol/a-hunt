@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Answer fingerprint maker</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main>
+    <h1>Answer fingerprint maker</h1>
+    <p>Type a puzzle answer. Copy the fingerprint below and paste it into that
+       puzzle page's <code>data-hash="..."</code>. Spaces, punctuation and
+       capitalization don't matter.</p>
+
+    <form class="answer" id="maker">
+      <input type="text" aria-label="Answer" autocomplete="off" spellcheck="false">
+      <button type="submit">Make fingerprint</button>
+      <p class="result" style="overflow-wrap:anywhere; font-family:monospace"></p>
+    </form>
+  </main>
+
+  <script>
+    // Same tidying and fingerprint as check.js, so the two always agree
+    document.getElementById("maker").addEventListener("submit", async function (event) {
+      event.preventDefault();
+      const tidy = this.querySelector("input").value.toUpperCase().replace(/[^A-Z]/g, "");
+      const digest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(tidy));
+      const hex = Array.from(new Uint8Array(digest)).map(b => b.toString(16).padStart(2, "0")).join("");
+      this.querySelector(".result").textContent = tidy ? hex : "";
+    });
+  </script>
+</body>
+</html>

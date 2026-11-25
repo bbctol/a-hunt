@@ -1,0 +1,150 @@
+/*
+  STYLE FOR THE WHOLE HUNT
+  Every page uses this one file, so a change here changes every page.
+  The look: black text on a white page, nothing else.
+*/
+
+/* Basic page setup */
+* { box-sizing: border-box; }
+
+html {
+  color-scheme: light;          /* always a white page, even in dark mode */
+}
+
+body {
+  margin: 0;
+  background: #fff;
+  color: #000;
+  font: 18px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* The small "A" at the very top of every page (the hunt title) */
+.hunt-title {
+  display: inline-block;
+  padding: 16px 20px;
+  font-size: 15px;
+  color: #000;
+  text-decoration: none;
+}
+
+/* The column that holds each page's content */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 80px;
+}
+
+/* Puzzle titles (Bet, Tom, 24) */
+h1 {
+  font-size: 32px;
+  font-weight: normal;
+  margin: 0 0 32px;
+}
+
+a { color: #000; }
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Home page list of puzzles ---------- */
+.puzzle-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+}
+.puzzle-list li { margin: 0 0 12px; }
+.puzzle-list .solved-answer {
+  margin-left: 16px;
+  font-size: 16px;
+  letter-spacing: 0.05em;
+}
+
+/* ---------- Bet: crossword clues in two columns ---------- */
+.clues {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 32px;
+}
+.clues h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 0 8px;
+}
+.clues ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.clues li { margin: 0 0 4px; }
+
+/* ---------- Tom: rows of empty squares ---------- */
+.tom p { margin: 0 0 12px; }
+.boxes {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.boxes span.box {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #000;
+}
+.boxes .label { margin-right: 8px; }
+.arrow {
+  font-size: 28px;
+  margin: 8px 0 24px !important;
+}
+
+/* ---------- 24: grid of eight images ---------- */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+/* ---------- The answer box at the bottom of each puzzle ---------- */
+.answer {
+  margin-top: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+.answer input {
+  font: inherit;
+  font-size: 16px;
+  padding: 8px 10px;
+  border: 1px solid #000;
+  border-radius: 0;
+  width: 260px;
+  max-width: 100%;
+  text-transform: uppercase;
+}
+.answer button {
+  font: inherit;
+  font-size: 16px;
+  padding: 8px 16px;
+  background: #fff;
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 0;
+  cursor: pointer;
+}
+.answer button:hover { background: #000; color: #fff; }
+.answer .result {
+  flex-basis: 100%;
+  margin: 8px 0 0;
+  min-height: 1.5em;
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  .image-grid { grid-template-columns: repeat(2, 1fr); }
+  .clues { grid-template-columns: 1fr; }
+  .boxes span.box { width: 36px; height: 36px; }
+}

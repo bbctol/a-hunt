@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bet</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="hunt-title" href="index.html">A</a>
+
+  <main>
+    <h1>Bet</h1>
+
+    <!-- The crossword grid (to swap it, replace images/bet-grid.png) -->
+    <img src="images/bet-grid.png" alt="Crossword grid" width="1020" height="1020">
+
+    <!-- THE CLUES: edit the text between <li> and </li> -->
+    <div class="clues">
+      <div>
+        <h2>ACROSS</h2>
+        <ol>
+          <li>2. F P</li>
+          <li>4. P ___</li>
+          <li>6. O V M</li>
+          <li>7. 10-down U?</li>
+          <li>10. G ___</li>
+          <li>11. ??????</li>
+          <li>12. ___ H</li>
+        </ol>
+      </div>
+      <div>
+        <h2>DOWN</h2>
+        <ol>
+          <li>1. A R</li>
+          <li>3. Y O</li>
+          <li>5. Q H</li>
+          <li>8. Y K??</li>
+          <li>9. Z P</li>
+          <li>10. O V C</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- ANSWER BOX. data-hash is the fingerprint of the answer.
+         To change the answer, get a new fingerprint from tools/make-hash.html -->
+    <form class="answer" data-puzzle="bet"
+          data-hash="7e9968b23a07d46569685d724b788f49779e7de2ff3ae6b5de049282a62c1216">
+      <input type="text" aria-label="Answer" autocomplete="off" spellcheck="false">
+      <button type="submit">Check</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="check.js"></script>
+</body>
+</html>

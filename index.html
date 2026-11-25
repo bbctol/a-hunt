@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Hunt title: appears at the top of every page -->
+  <a class="hunt-title" href="index.html">A</a>
+
+  <main>
+    <!--
+      THE LIST OF PUZZLES
+      Each line: a link to the puzzle page, plus an empty <span> where the
+      solver's answer appears once they've solved it (data-solved-for must
+      match the data-puzzle nickname on that puzzle's answer form).
+    -->
+    <ul class="puzzle-list">
+      <li><a href="bet.html">Bet</a><span class="solved-answer" data-solved-for="bet"></span></li>
+      <li><a href="tom.html">Tom</a><span class="solved-answer" data-solved-for="tom"></span></li>
+      <li><a href="24.html">24</a><span class="solved-answer" data-solved-for="24"></span></li>
+      <!-- The final puzzle has no title of its own; this link text is just for the list -->
+      <li><a href="final.html">Final</a><span class="solved-answer" data-solved-for="final"></span></li>
+    </ul>
+  </main>
+
+  <script src="check.js"></script>
+</body>
+</html>

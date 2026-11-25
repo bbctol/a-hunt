@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tom</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <a class="hunt-title" href="index.html">A</a>
+
+  <main>
+    <h1>Tom</h1>
+
+    <div class="tom">
+
+      <!-- SECTION 1: clue line, five empty squares, arrow -->
+      <p>Kleene award event; “It’s cold!”; unspecified degree</p>
+      <div class="boxes">
+        <span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span>
+      </div>
+      <p class="arrow" aria-hidden="true">↓</p>
+
+      <!-- SECTION 2 -->
+      <p>Evil spell; natural log constant; Pacific Northwest airport city</p>
+      <div class="boxes">
+        <span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span>
+      </div>
+      <p class="arrow" aria-hidden="true">↓</p>
+
+      <!-- SECTION 3: "heavy:" label before the first square -->
+      <div class="boxes">
+        <span class="label">heavy:</span>
+        <span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span>
+      </div>
+
+    </div>
+
+    <!-- ANSWER BOX. To change the answer, get a new fingerprint from tools/make-hash.html -->
+    <form class="answer" data-puzzle="tom"
+          data-hash="5ba1648aa55a5bb6348380934913be7979545cd296a2459687d5aaac31698ba6">
+      <input type="text" aria-label="Answer" autocomplete="off" spellcheck="false">
+      <button type="submit">Check</button>
+      <p class="result" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <script src="check.js"></script>
+</body>
+</html>
