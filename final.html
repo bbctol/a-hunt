@@ -13,6 +13,19 @@
   <main>
     <!-- No puzzle title here on purpose: this puzzle's name is just "A". -->
 
+    <!--
+      ANSWERS FROM THE OTHER PUZZLES
+      These fill in by themselves once a solver has solved each puzzle
+      (check.js looks up the saved answer for whatever nickname is in
+      data-solved-for, which must match that puzzle's data-puzzle).
+      Until then, the answer spot stays blank.
+    -->
+    <ul class="feeder-answers">
+      <li><span class="feeder-name">Bet</span><span class="solved-answer" data-solved-for="bet"></span></li>
+      <li><span class="feeder-name">Tom</span><span class="solved-answer" data-solved-for="tom"></span></li>
+      <li><span class="feeder-name">24</span><span class="solved-answer" data-solved-for="24"></span></li>
+    </ul>
+
     <img src="images/final.png" alt="Puzzle image" width="2000" height="1700">
 
     <!-- ANSWER BOX. To change the answer, get a new fingerprint from tools/make-hash.html -->
