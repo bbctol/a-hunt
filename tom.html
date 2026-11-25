@@ -4,10 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>tom</title>
-  <!-- Loads the Inter font from Google Fonts -->
+  <!-- Loads the Inter font from Google Fonts, plus "Caveat" (a handwriting
+       font) used only for the blue "heavy" note on this page -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Caveat:wght@500&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -33,10 +34,23 @@
       </div>
       <p class="arrow" aria-hidden="true">↓</p>
 
-      <!-- SECTION 3: "heavy:" label before the first square -->
-      <div class="boxes">
-        <span class="label">heavy:</span>
-        <span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span>
+      <!-- SECTION 3: five squares, with a hand-written-looking blue note
+           ("heavy →") off to the left, and a hand-drawn circle around the
+           first square. Both drawings are small inline SVGs (line drawings
+           written in code); their look is set under "Tom" in style.css. -->
+      <div class="boxes handwritten-row">
+
+        <!-- The note. To change the word, edit "heavy" below. -->
+        <span class="scribble-note">heavy<svg class="scribble-arrow" viewBox="0 0 40 20" aria-hidden="true">
+            <path d="M2 11 C 12 9, 24 10, 36 9 M28 3 C 31 6, 34 8, 37 9 C 33 11, 30 14, 27 17"/>
+          </svg></span>
+
+        <!-- First square, with the circle drawn around it -->
+        <span class="box circled"><svg class="scribble-circle" viewBox="0 0 100 100" aria-hidden="true">
+            <path d="M58 5 C 28 1, 5 20, 7 50 C 9 79, 33 97, 60 93 C 87 89, 98 63, 92 37 C 86 13, 64 3, 38 9"/>
+          </svg></span>
+
+        <span class="box"></span><span class="box"></span><span class="box"></span><span class="box"></span>
       </div>
 
     </div>

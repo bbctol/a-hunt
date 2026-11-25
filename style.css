@@ -112,10 +112,65 @@ img {
   height: 44px;
   border: 2px solid #000;
 }
-.boxes .label { margin-right: 8px; }
 .arrow {
   font-size: 28px;
   margin: 8px 0 24px !important;
+}
+
+/* Tom's last row: the blue hand-written note and circle.
+   "Pen blue" is set once here; change it to recolor both drawings. */
+.handwritten-row {
+  --pen: #2340c8;
+  position: relative;          /* lets the note be placed relative to this row */
+}
+/* "heavy →": hangs off to the LEFT of the squares (outside the text column),
+   so the squares still line up with the rows above. */
+.scribble-note {
+  position: absolute;
+  right: calc(100% + 4px);     /* just left of the first square */
+  top: 14px;                   /* a little lower than the middle, like the sketch */
+  display: flex;
+  align-items: center;
+  font-family: "Caveat", "Comic Sans MS", cursive;
+  font-size: 30px;
+  line-height: 1;
+  color: var(--pen);
+  white-space: nowrap;
+  transform: rotate(-7deg);    /* slight tilt so it looks hand-written */
+}
+/* The two drawings share the same "pen" look */
+.scribble-arrow path,
+.scribble-circle path {
+  fill: none;
+  stroke: var(--pen);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;   /* keeps the line the same thickness */
+}
+.scribble-arrow {
+  width: 34px;
+  height: 17px;
+  margin-left: 2px;
+}
+/* The circle sits on top of the first square, a bit bigger than it */
+.boxes span.circled { position: relative; }
+.scribble-circle {
+  position: absolute;
+  left: -14px;
+  top: -14px;
+  width: calc(100% + 28px);
+  height: calc(100% + 28px);
+  transform: rotate(-4deg);
+  pointer-events: none;
+}
+/* On narrower screens there's no room to the left of the column,
+   so the note sits in the row just before the squares instead. */
+@media (max-width: 1000px) {
+  .scribble-note {
+    position: static;
+    margin-right: 14px;        /* room for the circle */
+  }
 }
 
 /* ---------- 24: grid of eight images ---------- */
