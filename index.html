@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A</title>
+  <!-- Loads the Inter font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,11 +23,13 @@
       match the data-puzzle nickname on that puzzle's answer form).
     -->
     <ul class="puzzle-list">
-      <li><a href="bet.html">Bet</a><span class="solved-answer" data-solved-for="bet"></span></li>
-      <li><a href="tom.html">Tom</a><span class="solved-answer" data-solved-for="tom"></span></li>
       <li><a href="24.html">24</a><span class="solved-answer" data-solved-for="24"></span></li>
-      <!-- The final puzzle has no title of its own; this link text is just for the list -->
-      <li><a href="final.html">Final</a><span class="solved-answer" data-solved-for="final"></span></li>
+      <li><a href="bet.html">bet</a><span class="solved-answer" data-solved-for="bet"></span></li>
+      <li><a href="tom.html">tom</a><span class="solved-answer" data-solved-for="tom"></span></li>
+      <!-- The final puzzle: its link is the empty-set symbol. The "final-link"
+           class adds the gap above it (see style.css). aria-label gives
+           screen readers a word to read instead of the symbol. -->
+      <li class="final-link"><a href="final.html" aria-label="final puzzle">∅</a><span class="solved-answer" data-solved-for="final"></span></li>
     </ul>
   </main>
 
