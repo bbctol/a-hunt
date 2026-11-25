@@ -26,7 +26,7 @@ body {
   padding: 16px 20px;
 }
 .hunt-title img {
-  height: 18px;        /* logo size: change this number to resize it */
+  height: 27px;        /* logo size: change this number to resize it */
   width: auto;         /* keeps the logo's shape */
 }
 
