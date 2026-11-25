@@ -63,6 +63,19 @@ img {
   letter-spacing: 0.05em;
 }
 
+/* ---------- Final: answers from the other puzzles, above the image ---------- */
+.feeder-answers {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+.feeder-answers li { margin: 0 0 8px; }
+.feeder-answers .feeder-name {
+  display: inline-block;
+  width: 60px;               /* lines the answers up in a neat column */
+}
+.feeder-answers .solved-answer { letter-spacing: 0.05em; }
+
 /* ---------- Bet: crossword clues in two columns ---------- */
 .clues {
   display: grid;
