@@ -15,14 +15,18 @@ body {
   margin: 0;
   background: #fff;
   color: #000;
-  font: 18px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* Inter is loaded in each page's <head>; the others are backups */
+  font: 18px/1.5 "Inter", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* The small "A" at the very top of every page (the hunt title) */
+/* The "A" logo at the very top of every page (the hunt title).
+   It's a link, but stays black (not blue) because it's the logo. */
 .hunt-title {
   display: inline-block;
   padding: 16px 20px;
-  font-size: 15px;
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
   color: #000;
   text-decoration: none;
 }
@@ -34,14 +38,15 @@ main {
   padding: 24px 20px 80px;
 }
 
-/* Puzzle titles (Bet, Tom, 24) */
+/* Puzzle titles (24, bet, tom) */
 h1 {
   font-size: 32px;
   font-weight: normal;
   margin: 0 0 32px;
 }
 
-a { color: #000; }
+/* Links are blue. To change the shade, change this color code. */
+a { color: #0645ad; }
 
 img {
   display: block;
@@ -57,6 +62,7 @@ img {
   font-size: 22px;
 }
 .puzzle-list li { margin: 0 0 12px; }
+.puzzle-list li.final-link { margin-top: 40px; }   /* the gap above ∅ */
 .puzzle-list .solved-answer {
   margin-left: 16px;
   font-size: 16px;
@@ -69,12 +75,11 @@ img {
   padding: 0;
   margin: 0 0 32px;
 }
-.feeder-answers li { margin: 0 0 8px; }
-.feeder-answers .feeder-name {
-  display: inline-block;
-  width: 60px;               /* lines the answers up in a neat column */
+.feeder-answers li {
+  margin: 0 0 8px;
+  min-height: 1.5em;         /* keeps an empty line's space even before it's solved */
+  letter-spacing: 0.05em;
 }
-.feeder-answers .solved-answer { letter-spacing: 0.05em; }
 
 /* ---------- Bet: crossword clues in two columns ---------- */
 .clues {

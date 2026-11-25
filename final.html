@@ -4,6 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>A</title>
+  <!-- Loads the Inter font from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,12 +22,12 @@
       These fill in by themselves once a solver has solved each puzzle
       (check.js looks up the saved answer for whatever nickname is in
       data-solved-for, which must match that puzzle's data-puzzle).
-      Until then, the answer spot stays blank.
+      Until then, each line is just blank space (in order: 24, bet, tom).
     -->
     <ul class="feeder-answers">
-      <li><span class="feeder-name">Bet</span><span class="solved-answer" data-solved-for="bet"></span></li>
-      <li><span class="feeder-name">Tom</span><span class="solved-answer" data-solved-for="tom"></span></li>
-      <li><span class="feeder-name">24</span><span class="solved-answer" data-solved-for="24"></span></li>
+      <li class="solved-answer" data-solved-for="24"></li>
+      <li class="solved-answer" data-solved-for="bet"></li>
+      <li class="solved-answer" data-solved-for="tom"></li>
     </ul>
 
     <img src="images/final.png" alt="Puzzle image" width="2000" height="1700">
