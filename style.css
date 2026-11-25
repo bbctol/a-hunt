@@ -20,15 +20,14 @@ body {
 }
 
 /* The "A" logo at the very top of every page (the hunt title).
-   It's a link, but stays black (not blue) because it's the logo. */
+   It's the picture images/logo.png, and clicking it goes home. */
 .hunt-title {
   display: inline-block;
   padding: 16px 20px;
-  font-size: 32px;
-  font-weight: bold;
-  line-height: 1;
-  color: #000;
-  text-decoration: none;
+}
+.hunt-title img {
+  height: 36px;        /* logo size: change this number to resize it */
+  width: auto;         /* keeps the logo's shape */
 }
 
 /* The column that holds each page's content */
