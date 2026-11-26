@@ -20,6 +20,14 @@ EDITING TEXT
 SWAPPING AN IMAGE
   Replace the file in images/ with a new one of the same name.
 
+CHANGING THE LOOK (style.css)
+  Browsers keep a saved copy of style.css, so visitors may not see
+  your changes right away. After editing style.css, open each .html
+  file and raise the number in  style.css?v=2  (to v=3, then v=4...).
+  That tells every browser to fetch the new version.
+  To check your own changes, do a hard refresh: Cmd+Shift+R (Mac)
+  or Ctrl+Shift+R (Windows).
+
 CHANGING AN ANSWER
   1. Open tools/make-hash.html in your browser (double-click it).
   2. Type the new answer and click "Make fingerprint".
