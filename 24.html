@@ -18,18 +18,46 @@
   <main>
     <h1>24</h1>
 
-    <!-- THE EIGHT IMAGES, in order (left to right, then the next row).
-         To swap one, replace the file in images/24/ with the same name.
-         The alt text is kept neutral so it doesn't give anything away. -->
-    <div class="image-grid">
-      <img src="images/24/1.png" alt="Image 1" width="1000" height="1500">
-      <img src="images/24/2.png" alt="Image 2" width="1000" height="1500">
-      <img src="images/24/3.png" alt="Image 3" width="1000" height="1500">
-      <img src="images/24/4.png" alt="Image 4" width="1000" height="1500">
-      <img src="images/24/5.png" alt="Image 5" width="1000" height="1500">
-      <img src="images/24/6.png" alt="Image 6" width="1000" height="1500">
-      <img src="images/24/7.png" alt="Image 7" width="1000" height="1500">
-      <img src="images/24/8.png" alt="Image 8" width="1000" height="1500">
+    <!--
+      THE PUZZLE AREA. This part is wider than the rest of the page.
+      (Its layout is under "24" in style.css.)
+
+      PART 1: THE EIGHT POSTERS, in two groups of four. Under each poster
+      is a blank line. On narrower screens the second group of four moves
+      underneath the first.
+      To swap a poster, replace the file in images/24/ with the same name.
+      The alt text is kept neutral so it doesn't give anything away.
+    -->
+    <div class="puzzle-24">
+      <div class="poster-groups">
+        <div class="poster-group">
+          <figure class="poster"><img src="images/24/1.png" alt="Image 1" width="1000" height="1500"><span class="blank"></span></figure>
+          <figure class="poster"><img src="images/24/2.png" alt="Image 2" width="1000" height="1500"><span class="blank"></span></figure>
+          <figure class="poster"><img src="images/24/3.png" alt="Image 3" width="1000" height="1500"><span class="blank"></span></figure>
+          <figure class="poster"><img src="images/24/4.png" alt="Image 4" width="1000" height="1500"><span class="blank"></span></figure>
+        </div>
+        <div class="poster-group">
+          <figure class="poster"><img src="images/24/5.png" alt="Image 5" width="1000" height="1500"><span class="blank"></span></figure>
+          <figure class="poster"><img src="images/24/6.png" alt="Image 6" width="1000" height="1500"><span class="blank"></span></figure>
+          <figure class="poster"><img src="images/24/7.png" alt="Image 7" width="1000" height="1500"><span class="blank"></span></figure>
+          <figure class="poster"><img src="images/24/8.png" alt="Image 8" width="1000" height="1500"><span class="blank"></span></figure>
+        </div>
+      </div>
+
+      <!-- PART 2: the man with the laurel wreath "saying" eight more blank
+           lines, also in two groups of four. -->
+      <div class="speech">
+        <img src="images/24/laurel.png" alt="Face" width="500" height="500">
+        <span class="colon" aria-hidden="true">:</span>
+        <div class="blank-lines">
+          <div class="blank-group">
+          <span class="blank"></span><span class="blank"></span><span class="blank"></span><span class="blank"></span>
+          </div>
+          <div class="blank-group">
+          <span class="blank"></span><span class="blank"></span><span class="blank"></span><span class="blank"></span>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- ANSWER BOX. To change the answer, get a new fingerprint from tools/make-hash.html -->
